@@ -6,7 +6,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/mainbkg"
+    android:background="@drawable/mainbg"
     tools:context=".MainActivity" >
 
     <LinearLayout
@@ -31,7 +31,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/tastytrendlogo" />
+        app:srcCompat="@drawable/newlogo" />
 
     <ImageView
         android:id="@+id/imageView3"
@@ -105,7 +105,7 @@
         android:fontFamily="@font/poppins"
         android:text="Sign up"
         android:textAlignment="center"
-        android:textColor="#F8B04A"
+        android:textColor="@color/green"
         android:textSize="18sp"
         app:cornerRadius="30dp"
         app:layout_constraintEnd_toEndOf="parent"
