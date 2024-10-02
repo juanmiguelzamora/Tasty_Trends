@@ -1,0 +1,30 @@
+[
+    {
+        "merged": "com.migsdev.tastytrends.app-mergeDebugResources-31:/layout/activity_drawer_navigation.xml",
+        "source": "com.migsdev.tastytrends.app-main-34:/layout/activity_drawer_navigation.xml"
+    },
+    {
+        "merged": "com.migsdev.tastytrends.app-mergeDebugResources-31:/layout/activity_home.xml",
+        "source": "com.migsdev.tastytrends.app-main-34:/layout/activity_home.xml"
+    },
+    {
+        "merged": "com.migsdev.tastytrends.app-mergeDebugResources-31:/layout/drawer_header.xml",
+        "source": "com.migsdev.tastytrends.app-main-34:/layout/drawer_header.xml"
+    },
+    {
+        "merged": "com.migsdev.tastytrends.app-mergeDebugResources-31:/layout/activity_sig_up.xml",
+        "source": "com.migsdev.tastytrends.app-main-34:/layout/activity_sig_up.xml"
+    },
+    {
+        "merged": "com.migsdev.tastytrends.app-mergeDebugResources-31:/layout/activity_login.xml",
+        "source": "com.migsdev.tastytrends.app-main-34:/layout/activity_login.xml"
+    },
+    {
+        "merged": "com.migsdev.tastytrends.app-mergeDebugResources-31:/layout/activity_main.xml",
+        "source": "com.migsdev.tastytrends.app-main-34:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.migsdev.tastytrends.app-mergeDebugResources-31:/layout/activity_forgot_pass.xml",
+        "source": "com.migsdev.tastytrends.app-main-34:/layout/activity_forgot_pass.xml"
+    }
+]
