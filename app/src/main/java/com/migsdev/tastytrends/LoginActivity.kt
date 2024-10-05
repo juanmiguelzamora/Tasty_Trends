@@ -22,7 +22,7 @@ class LoginActivity : AppCompatActivity() {
 
         val btnsignin = findViewById<Button>(R.id.btnsignin)
         btnsignin.setOnClickListener {
-            val intent = Intent(this, HomeActivity::class.java)
+            val intent = Intent(this, DrawerNavigation::class.java)
             startActivity(intent)
         }
 

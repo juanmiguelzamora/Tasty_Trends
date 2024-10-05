@@ -1,4 +1,4 @@
-#Wed Oct 02 19:55:24 CST 2024
+#Fri Oct 04 01:34:10 CST 2024
 base.0=C\:\\Users\\User\\AndroidStudioProjects\\TastyTrends\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
 base.1=C\:\\Users\\User\\AndroidStudioProjects\\TastyTrends\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
 base.2=C\:\\Users\\User\\AndroidStudioProjects\\TastyTrends\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\5\\classes.dex

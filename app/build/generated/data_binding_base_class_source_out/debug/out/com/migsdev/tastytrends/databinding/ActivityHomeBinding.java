@@ -4,15 +4,16 @@ package com.migsdev.tastytrends.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.widget.SearchView;
+import androidx.appcompat.widget.Toolbar;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
-import com.google.android.material.card.MaterialCardView;
 import com.migsdev.tastytrends.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
@@ -20,37 +21,46 @@ import java.lang.String;
 
 public final class ActivityHomeBinding implements ViewBinding {
   @NonNull
-  private final LinearLayout rootView;
+  private final DrawerLayout rootView;
 
   @NonNull
   public final ImageView buttonDrawerToggle;
 
   @NonNull
-  public final LinearLayout main;
+  public final EditText editTextText;
 
   @NonNull
-  public final MaterialCardView materialCard;
+  public final FrameLayout fragmentContainer;
 
   @NonNull
-  public final SearchView searchView;
+  public final ImageView imageView9;
+
+  @NonNull
+  public final DrawerLayout main;
 
   @NonNull
   public final TextView textView5;
 
-  private ActivityHomeBinding(@NonNull LinearLayout rootView, @NonNull ImageView buttonDrawerToggle,
-      @NonNull LinearLayout main, @NonNull MaterialCardView materialCard,
-      @NonNull SearchView searchView, @NonNull TextView textView5) {
+  @NonNull
+  public final Toolbar toolbar;
+
+  private ActivityHomeBinding(@NonNull DrawerLayout rootView, @NonNull ImageView buttonDrawerToggle,
+      @NonNull EditText editTextText, @NonNull FrameLayout fragmentContainer,
+      @NonNull ImageView imageView9, @NonNull DrawerLayout main, @NonNull TextView textView5,
+      @NonNull Toolbar toolbar) {
     this.rootView = rootView;
     this.buttonDrawerToggle = buttonDrawerToggle;
+    this.editTextText = editTextText;
+    this.fragmentContainer = fragmentContainer;
+    this.imageView9 = imageView9;
     this.main = main;
-    this.materialCard = materialCard;
-    this.searchView = searchView;
     this.textView5 = textView5;
+    this.toolbar = toolbar;
   }
 
   @Override
   @NonNull
-  public LinearLayout getRoot() {
+  public DrawerLayout getRoot() {
     return rootView;
   }
 
@@ -81,19 +91,25 @@ public final class ActivityHomeBinding implements ViewBinding {
         break missingId;
       }
 
-      LinearLayout main = (LinearLayout) rootView;
-
-      id = R.id.materialCard;
-      MaterialCardView materialCard = ViewBindings.findChildViewById(rootView, id);
-      if (materialCard == null) {
+      id = R.id.editTextText;
+      EditText editTextText = ViewBindings.findChildViewById(rootView, id);
+      if (editTextText == null) {
         break missingId;
       }
 
-      id = R.id.searchView;
-      SearchView searchView = ViewBindings.findChildViewById(rootView, id);
-      if (searchView == null) {
+      id = R.id.fragment_container;
+      FrameLayout fragmentContainer = ViewBindings.findChildViewById(rootView, id);
+      if (fragmentContainer == null) {
         break missingId;
       }
+
+      id = R.id.imageView9;
+      ImageView imageView9 = ViewBindings.findChildViewById(rootView, id);
+      if (imageView9 == null) {
+        break missingId;
+      }
+
+      DrawerLayout main = (DrawerLayout) rootView;
 
       id = R.id.textView5;
       TextView textView5 = ViewBindings.findChildViewById(rootView, id);
@@ -101,8 +117,14 @@ public final class ActivityHomeBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityHomeBinding((LinearLayout) rootView, buttonDrawerToggle, main,
-          materialCard, searchView, textView5);
+      id = R.id.toolbar;
+      Toolbar toolbar = ViewBindings.findChildViewById(rootView, id);
+      if (toolbar == null) {
+        break missingId;
+      }
+
+      return new ActivityHomeBinding((DrawerLayout) rootView, buttonDrawerToggle, editTextText,
+          fragmentContainer, imageView9, main, textView5, toolbar);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
