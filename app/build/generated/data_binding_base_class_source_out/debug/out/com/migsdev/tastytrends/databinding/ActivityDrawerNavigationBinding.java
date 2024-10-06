@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
+import android.widget.ImageView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.Toolbar;
@@ -28,6 +29,9 @@ public final class ActivityDrawerNavigationBinding implements ViewBinding {
   public final FrameLayout fragmentContainer;
 
   @NonNull
+  public final ImageView imageView6;
+
+  @NonNull
   public final NavigationView navView;
 
   @NonNull
@@ -35,10 +39,11 @@ public final class ActivityDrawerNavigationBinding implements ViewBinding {
 
   private ActivityDrawerNavigationBinding(@NonNull DrawerLayout rootView,
       @NonNull DrawerLayout drawerLayout, @NonNull FrameLayout fragmentContainer,
-      @NonNull NavigationView navView, @NonNull Toolbar toolbar) {
+      @NonNull ImageView imageView6, @NonNull NavigationView navView, @NonNull Toolbar toolbar) {
     this.rootView = rootView;
     this.drawerLayout = drawerLayout;
     this.fragmentContainer = fragmentContainer;
+    this.imageView6 = imageView6;
     this.navView = navView;
     this.toolbar = toolbar;
   }
@@ -78,6 +83,12 @@ public final class ActivityDrawerNavigationBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.imageView6;
+      ImageView imageView6 = ViewBindings.findChildViewById(rootView, id);
+      if (imageView6 == null) {
+        break missingId;
+      }
+
       id = R.id.nav_view;
       NavigationView navView = ViewBindings.findChildViewById(rootView, id);
       if (navView == null) {
@@ -91,7 +102,7 @@ public final class ActivityDrawerNavigationBinding implements ViewBinding {
       }
 
       return new ActivityDrawerNavigationBinding((DrawerLayout) rootView, drawerLayout,
-          fragmentContainer, navView, toolbar);
+          fragmentContainer, imageView6, navView, toolbar);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
