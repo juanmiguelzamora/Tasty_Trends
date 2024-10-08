@@ -28,6 +28,12 @@
         android:testOnly="true"
         android:theme="@style/Theme.TastyTrends" >
         <activity
+            android:name="com.migsdev.tastytrends.CartActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.migsdev.tastytrends.JFCActivity"
+            android:exported="false" />
+        <activity
             android:name="com.migsdev.tastytrends.DrawerNavigation"
             android:exported="false" />
         <activity

@@ -4,12 +4,15 @@ package com.migsdev.tastytrends.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.google.android.material.navigation.NavigationView;
@@ -26,6 +29,9 @@ public final class ActivityDrawerNavigationBinding implements ViewBinding {
   public final DrawerLayout drawerLayout;
 
   @NonNull
+  public final EditText editTextText;
+
+  @NonNull
   public final FrameLayout fragmentContainer;
 
   @NonNull
@@ -35,16 +41,27 @@ public final class ActivityDrawerNavigationBinding implements ViewBinding {
   public final NavigationView navView;
 
   @NonNull
+  public final RecyclerView rvStallLists;
+
+  @NonNull
+  public final TextView textView7;
+
+  @NonNull
   public final Toolbar toolbar;
 
   private ActivityDrawerNavigationBinding(@NonNull DrawerLayout rootView,
-      @NonNull DrawerLayout drawerLayout, @NonNull FrameLayout fragmentContainer,
-      @NonNull ImageView imageView6, @NonNull NavigationView navView, @NonNull Toolbar toolbar) {
+      @NonNull DrawerLayout drawerLayout, @NonNull EditText editTextText,
+      @NonNull FrameLayout fragmentContainer, @NonNull ImageView imageView6,
+      @NonNull NavigationView navView, @NonNull RecyclerView rvStallLists,
+      @NonNull TextView textView7, @NonNull Toolbar toolbar) {
     this.rootView = rootView;
     this.drawerLayout = drawerLayout;
+    this.editTextText = editTextText;
     this.fragmentContainer = fragmentContainer;
     this.imageView6 = imageView6;
     this.navView = navView;
+    this.rvStallLists = rvStallLists;
+    this.textView7 = textView7;
     this.toolbar = toolbar;
   }
 
@@ -77,6 +94,12 @@ public final class ActivityDrawerNavigationBinding implements ViewBinding {
     missingId: {
       DrawerLayout drawerLayout = (DrawerLayout) rootView;
 
+      id = R.id.editTextText;
+      EditText editTextText = ViewBindings.findChildViewById(rootView, id);
+      if (editTextText == null) {
+        break missingId;
+      }
+
       id = R.id.fragment_container;
       FrameLayout fragmentContainer = ViewBindings.findChildViewById(rootView, id);
       if (fragmentContainer == null) {
@@ -95,6 +118,18 @@ public final class ActivityDrawerNavigationBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.rvStallLists;
+      RecyclerView rvStallLists = ViewBindings.findChildViewById(rootView, id);
+      if (rvStallLists == null) {
+        break missingId;
+      }
+
+      id = R.id.textView7;
+      TextView textView7 = ViewBindings.findChildViewById(rootView, id);
+      if (textView7 == null) {
+        break missingId;
+      }
+
       id = R.id.toolbar;
       Toolbar toolbar = ViewBindings.findChildViewById(rootView, id);
       if (toolbar == null) {
@@ -102,7 +137,7 @@ public final class ActivityDrawerNavigationBinding implements ViewBinding {
       }
 
       return new ActivityDrawerNavigationBinding((DrawerLayout) rootView, drawerLayout,
-          fragmentContainer, imageView6, navView, toolbar);
+          editTextText, fragmentContainer, imageView6, navView, rvStallLists, textView7, toolbar);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

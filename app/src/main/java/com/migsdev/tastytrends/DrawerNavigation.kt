@@ -3,6 +3,7 @@ package com.migsdev.tastytrends
 import android.content.Intent
 import android.os.Bundle
 import android.view.MenuItem
+import android.view.View
 import android.widget.Button
 import android.widget.ImageView
 import androidx.activity.enableEdgeToEdge
@@ -15,11 +16,16 @@ import androidx.core.view.WindowInsetsCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.navigation.NavigationView
 
 class DrawerNavigation : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
     private lateinit var drawerLayout: DrawerLayout
+    private var recyclerView : RecyclerView? = null
+    private var recyclerViewStallsAdapter : RecyclerViewStallsAdapter? = null
+    private var stallList = mutableListOf<Stalls>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,6 +36,16 @@ class DrawerNavigation : AppCompatActivity(), NavigationView.OnNavigationItemSel
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
+        stallList = ArrayList()
+
+        recyclerView = findViewById<View>(R.id.rvStallLists) as RecyclerView
+        recyclerViewStallsAdapter = RecyclerViewStallsAdapter(this@DrawerNavigation, stallList)
+        val layoutManager : RecyclerView.LayoutManager = GridLayoutManager(this, 2)
+        recyclerView!!.layoutManager = layoutManager
+        recyclerView!!.adapter = recyclerViewStallsAdapter
+
+        prepareStallsListData()
 
         // Initialize DrawerLayout
         drawerLayout = findViewById(R.id.drawer_layout)
@@ -48,6 +64,39 @@ class DrawerNavigation : AppCompatActivity(), NavigationView.OnNavigationItemSel
         toggle.syncState()
     }
 
+    private fun prepareStallsListData() {
+        var stalls = Stalls("jfc", R.drawable.jfc)
+        stallList.add(stalls)
+        stalls = Stalls("arnold", R.drawable.arnold)
+        stallList.add((stalls))
+
+        stalls = Stalls("happiness", R.drawable.happiness_food)
+        stallList.add((stalls))
+
+        stalls = Stalls("specialvigan", R.drawable.speical_vigan)
+        stallList.add((stalls))
+
+        stalls = Stalls("kyah", R.drawable.khay_sa_wrap)
+        stallList.add((stalls))
+
+        stalls = Stalls("jdj", R.drawable.jdjdimsum)
+        stallList.add((stalls))
+
+        stalls = Stalls("hotto", R.drawable.hotto)
+        stallList.add((stalls))
+
+        stalls = Stalls("buko", R.drawable.buko)
+        stallList.add((stalls))
+
+        stalls = Stalls("gaerlan", R.drawable.gaerlan)
+        stallList.add((stalls))
+
+        stalls = Stalls("jos", R.drawable.jos)
+        stallList.add((stalls))
+
+        recyclerViewStallsAdapter!!.notifyDataSetChanged()
+    }
+
     // Replace fragments dynamically
     private fun replaceFragment(fragment: Fragment) {
         val transaction: FragmentTransaction = supportFragmentManager.beginTransaction()
@@ -60,13 +109,18 @@ class DrawerNavigation : AppCompatActivity(), NavigationView.OnNavigationItemSel
         when (item.itemId) {
             R.id.navHome -> {
                 // Handle Home navigation
-                replaceFragment(HomeFragment()) // Assuming you have HomeFragment implemented
+                replaceFragment(HomeFragment())
             }
+//            R.id.navProfile -> {
+//                replaceFragment()
+//            }
             R.id.navOrders -> {
                 // Handle Settings navigation
-                replaceFragment(OrdersFragment()) // Assuming you have SettingsFragment implemented
+                replaceFragment(OrdersFragment())
             }
-            // Add more cases for other menu items if needed
+            R.id.navFavorite -> {
+                replaceFragment(FavoritesFragment())
+            }
         }
         // Close the drawer after selecting an item
         drawerLayout.closeDrawer(GravityCompat.START)
