@@ -4,7 +4,6 @@ package com.migsdev.tastytrends.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -13,6 +12,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.widget.AppCompatButton;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
+import com.google.android.material.textfield.TextInputLayout;
 import com.migsdev.tastytrends.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
@@ -32,10 +32,10 @@ public final class ActivityLoginBinding implements ViewBinding {
   public final ImageView imageView2;
 
   @NonNull
-  public final EditText loginEmail;
+  public final TextInputLayout loginEmail;
 
   @NonNull
-  public final EditText loginPassword;
+  public final TextInputLayout loginPassword;
 
   @NonNull
   public final LinearLayout main;
@@ -48,8 +48,8 @@ public final class ActivityLoginBinding implements ViewBinding {
 
   private ActivityLoginBinding(@NonNull LinearLayout rootView, @NonNull AppCompatButton btnreturn,
       @NonNull AppCompatButton btnsignin, @NonNull ImageView imageView2,
-      @NonNull EditText loginEmail, @NonNull EditText loginPassword, @NonNull LinearLayout main,
-      @NonNull TextView textView, @NonNull TextView tvforgotbtn) {
+      @NonNull TextInputLayout loginEmail, @NonNull TextInputLayout loginPassword,
+      @NonNull LinearLayout main, @NonNull TextView textView, @NonNull TextView tvforgotbtn) {
     this.rootView = rootView;
     this.btnreturn = btnreturn;
     this.btnsignin = btnsignin;
@@ -107,13 +107,13 @@ public final class ActivityLoginBinding implements ViewBinding {
       }
 
       id = R.id.login_email;
-      EditText loginEmail = ViewBindings.findChildViewById(rootView, id);
+      TextInputLayout loginEmail = ViewBindings.findChildViewById(rootView, id);
       if (loginEmail == null) {
         break missingId;
       }
 
       id = R.id.login_password;
-      EditText loginPassword = ViewBindings.findChildViewById(rootView, id);
+      TextInputLayout loginPassword = ViewBindings.findChildViewById(rootView, id);
       if (loginPassword == null) {
         break missingId;
       }

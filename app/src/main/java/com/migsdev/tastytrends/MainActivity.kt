@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
 
-        Thread.sleep(3000)
+        Thread.sleep(1000)
         installSplashScreen()
 
         requestWindowFeature(Window.FEATURE_NO_TITLE);

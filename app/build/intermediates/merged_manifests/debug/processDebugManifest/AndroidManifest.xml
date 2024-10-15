@@ -28,6 +28,18 @@
         android:testOnly="true"
         android:theme="@style/Theme.TastyTrends" >
         <activity
+            android:name="com.migsdev.tastytrends.ArnoldActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.migsdev.tastytrends.NotificationActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.migsdev.tastytrends.FavoritesActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.migsdev.tastytrends.ProfileActivity"
+            android:exported="false" />
+        <activity
             android:name="com.migsdev.tastytrends.CartActivity"
             android:exported="false" />
         <activity

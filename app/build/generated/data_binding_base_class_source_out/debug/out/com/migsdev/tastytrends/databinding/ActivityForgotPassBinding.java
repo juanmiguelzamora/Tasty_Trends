@@ -4,7 +4,6 @@ package com.migsdev.tastytrends.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -13,6 +12,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.widget.AppCompatButton;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
+import com.google.android.material.textfield.TextInputLayout;
 import com.migsdev.tastytrends.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
@@ -32,7 +32,7 @@ public final class ActivityForgotPassBinding implements ViewBinding {
   public final ImageView imageView4;
 
   @NonNull
-  public final EditText loginEmail;
+  public final TextInputLayout loginEmail;
 
   @NonNull
   public final LinearLayout main;
@@ -45,7 +45,7 @@ public final class ActivityForgotPassBinding implements ViewBinding {
 
   private ActivityForgotPassBinding(@NonNull LinearLayout rootView, @NonNull TextView btnreturn,
       @NonNull AppCompatButton btnsignin, @NonNull ImageView imageView4,
-      @NonNull EditText loginEmail, @NonNull LinearLayout main, @NonNull TextView textView2,
+      @NonNull TextInputLayout loginEmail, @NonNull LinearLayout main, @NonNull TextView textView2,
       @NonNull TextView textView6) {
     this.rootView = rootView;
     this.btnreturn = btnreturn;
@@ -103,7 +103,7 @@ public final class ActivityForgotPassBinding implements ViewBinding {
       }
 
       id = R.id.login_email;
-      EditText loginEmail = ViewBindings.findChildViewById(rootView, id);
+      TextInputLayout loginEmail = ViewBindings.findChildViewById(rootView, id);
       if (loginEmail == null) {
         break missingId;
       }

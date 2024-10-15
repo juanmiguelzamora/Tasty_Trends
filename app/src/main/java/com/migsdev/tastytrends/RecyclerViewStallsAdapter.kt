@@ -8,22 +8,30 @@ import android.widget.Toast
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 
-class RecyclerViewStallsAdapter constructor(private val getActivity: DrawerNavigation, private val stallsList : List<Stalls>)
-    : RecyclerView.Adapter<RecyclerViewStallsAdapter.MyViewHolder>() {
+class RecyclerViewStallsAdapter(
+    private val activity: DrawerNavigation,
+    private val stallsList: List<Stalls>
+) : RecyclerView.Adapter<RecyclerViewStallsAdapter.MyViewHolder>() {
 
-        var onItemClick : ((Stalls) -> Unit)? = null
+    // Callback for item clicks
+    var onItemClick: ((Stalls) -> Unit)? = null
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.layout_stall_lists_item,parent, false)
-
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.layout_stall_lists_item, parent, false)
         return MyViewHolder(view)
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-        holder.ivStallsImg.setImageResource(stallsList[position].image)
+        val stall = stallsList[position]
+        holder.ivStallsImg.setImageResource(stall.image)
 
+        // Set up click listener on the card view
         holder.cardView.setOnClickListener {
-            Toast.makeText(getActivity, stallsList[position].title, Toast.LENGTH_LONG).show()
+            // Show a toast message (optional)
+            Toast.makeText(activity, stall.title, Toast.LENGTH_SHORT).show()
+
+            // Trigger the onItemClick listener with the clicked stall
+            onItemClick?.invoke(stall)
         }
     }
 
@@ -31,10 +39,8 @@ class RecyclerViewStallsAdapter constructor(private val getActivity: DrawerNavig
         return stallsList.size
     }
 
-    class MyViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView) {
-//        val StallsTitle : TextView = itemView.findViewById(R.id.stallsTitle)
-        val ivStallsImg : ImageView = itemView.findViewById(R.id.ivJfcmenuImg)
-        val cardView : CardView = itemView.findViewById(R.id.cardView)
+    class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        val ivStallsImg: ImageView = itemView.findViewById(R.id.ivJfcmenuImg)
+        val cardView: CardView = itemView.findViewById(R.id.cardView)
     }
-
 }

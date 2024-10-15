@@ -29,7 +29,7 @@
                 android:layout_height="match_parent">
 
                 <ImageView
-                    android:id="@+id/imageView8"
+                    android:id="@+id/btncartBack"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
@@ -48,7 +48,7 @@
                     android:text="Shopping Cart"
                     android:textColor="@color/black"
                     android:textSize="18sp"
-                    app:layout_constraintStart_toEndOf="@+id/imageView8"
+                    app:layout_constraintStart_toEndOf="@+id/btncartBack"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <ImageView

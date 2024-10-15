@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.FrameLayout;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
@@ -24,6 +25,9 @@ import java.lang.String;
 public final class ActivityDrawerNavigationBinding implements ViewBinding {
   @NonNull
   private final DrawerLayout rootView;
+
+  @NonNull
+  public final ImageButton cartIcon;
 
   @NonNull
   public final DrawerLayout drawerLayout;
@@ -50,11 +54,12 @@ public final class ActivityDrawerNavigationBinding implements ViewBinding {
   public final Toolbar toolbar;
 
   private ActivityDrawerNavigationBinding(@NonNull DrawerLayout rootView,
-      @NonNull DrawerLayout drawerLayout, @NonNull EditText editTextText,
-      @NonNull FrameLayout fragmentContainer, @NonNull ImageView imageView6,
-      @NonNull NavigationView navView, @NonNull RecyclerView rvStallLists,
-      @NonNull TextView textView7, @NonNull Toolbar toolbar) {
+      @NonNull ImageButton cartIcon, @NonNull DrawerLayout drawerLayout,
+      @NonNull EditText editTextText, @NonNull FrameLayout fragmentContainer,
+      @NonNull ImageView imageView6, @NonNull NavigationView navView,
+      @NonNull RecyclerView rvStallLists, @NonNull TextView textView7, @NonNull Toolbar toolbar) {
     this.rootView = rootView;
+    this.cartIcon = cartIcon;
     this.drawerLayout = drawerLayout;
     this.editTextText = editTextText;
     this.fragmentContainer = fragmentContainer;
@@ -92,6 +97,12 @@ public final class ActivityDrawerNavigationBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.cartIcon;
+      ImageButton cartIcon = ViewBindings.findChildViewById(rootView, id);
+      if (cartIcon == null) {
+        break missingId;
+      }
+
       DrawerLayout drawerLayout = (DrawerLayout) rootView;
 
       id = R.id.editTextText;
@@ -136,7 +147,7 @@ public final class ActivityDrawerNavigationBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityDrawerNavigationBinding((DrawerLayout) rootView, drawerLayout,
+      return new ActivityDrawerNavigationBinding((DrawerLayout) rootView, cartIcon, drawerLayout,
           editTextText, fragmentContainer, imageView6, navView, rvStallLists, textView7, toolbar);
     }
     String missingId = rootView.getResources().getResourceName(id);
