@@ -3,11 +3,17 @@ package com.migsdev.tastytrends
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.EditText
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.roydev.tastytrends.ApiClient
+import com.roydev.tastytrends.LoginReq
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 
 class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,6 +28,21 @@ class LoginActivity : AppCompatActivity() {
 
         val btnsignin = findViewById<Button>(R.id.btnsignin)
         btnsignin.setOnClickListener {
+            val apiService = ApiClient.apiService
+            val email = findViewById<EditText>(R.id.login_email).text.toString()
+            val password = findViewById<EditText>(R.id.login_password).text.toString()
+
+            btnsignin.isEnabled = false // Disable the button
+            CoroutineScope(Dispatchers.IO).launch {
+
+                try {
+                    val data = apiService.Login(LoginReq(email, password))
+
+                } catch (e: Exception) {
+                    // Handle the error
+                }
+            }
+
             val intent = Intent(this, DrawerNavigation::class.java)
             startActivity(intent)
         }

@@ -9,8 +9,15 @@ import android.widget.Toast
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 
-class RecyclerViewJfcMenuAdapter constructor(private val getActivity: JFCActivity, private val jfcList: List<JFC>)
-    : RecyclerView.Adapter<RecyclerViewJfcMenuAdapter.MyViewHolder>() {
+// Define the interface for favorite click
+interface OnFavoriteClickListener {
+    fun onFavoriteClick(item: JFC)
+}
+
+class RecyclerViewJfcMenuAdapter(
+    private val listener: OnFavoriteClickListener,
+    private val jfcList: List<JFC>
+) : RecyclerView.Adapter<RecyclerViewJfcMenuAdapter.MyViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.layout_jfc_menu_lists, parent, false)
@@ -18,12 +25,19 @@ class RecyclerViewJfcMenuAdapter constructor(private val getActivity: JFCActivit
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-        holder.tvmenuName.text = jfcList[position].title
-        holder.tvprice.text = jfcList[position].price
-        holder.ivJfcmenuImg.setImageResource(jfcList[position].image)
+        val item = jfcList[position]
+        holder.tvmenuName.text = item.title
+        holder.tvprice.text = item.price
+        holder.ivJfcmenuImg.setImageResource(item.image)
+        holder.btn_favorite.setImageResource(R.drawable.favorite_icon) // Default favorite icon
+
+
+        holder.btn_favorite.setOnClickListener {
+            listener.onFavoriteClick(item) // Call the interface method
+        }
 
         holder.cardView.setOnClickListener {
-            Toast.makeText(getActivity, jfcList[position].title, Toast.LENGTH_LONG).show()
+            Toast.makeText(holder.itemView.context, item.title, Toast.LENGTH_LONG).show()
         }
     }
 
@@ -36,6 +50,7 @@ class RecyclerViewJfcMenuAdapter constructor(private val getActivity: JFCActivit
         val tvmenuName: TextView = itemView.findViewById(R.id.tvmenuName)
         val ivJfcmenuImg: ImageView = itemView.findViewById(R.id.ivJfcmenuImg)
         val tvprice: TextView = itemView.findViewById(R.id.tvPrice)
+        val btn_favorite: ImageView = itemView.findViewById(R.id.btn_favorite)
         val cardView: CardView = itemView.findViewById(R.id.cardView)
     }
 }

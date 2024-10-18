@@ -26,10 +26,10 @@
             android:id="@+id/navOrders"
             android:title="Orders"/>
 
-        <item
-            android:icon="@drawable/notification"
-            android:id="@+id/navNotification"
-            android:title="Notification"/>
+<!--        <item-->
+<!--            android:icon="@drawable/notification"-->
+<!--            android:id="@+id/navNotification"-->
+<!--            android:title="Notification"/>-->
 
     </group>
 

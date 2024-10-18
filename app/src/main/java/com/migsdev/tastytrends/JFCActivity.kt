@@ -3,8 +3,8 @@ package com.migsdev.tastytrends
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
-import android.widget.Button
 import android.widget.ImageView
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -12,16 +12,17 @@ import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
-class JFCActivity : AppCompatActivity() {
-
-    private var recyclerView : RecyclerView? = null
-    private var recylerViewJfcMenuAdapter : RecyclerViewJfcMenuAdapter? = null
-    private  var jfcList = mutableListOf<JFC>()
+class JFCActivity : AppCompatActivity(), OnFavoriteClickListener {
+    private var recyclerView: RecyclerView? = null
+    private var recyclerViewJfcMenuAdapter: RecyclerViewJfcMenuAdapter? = null
+    private var jfcList = mutableListOf<JFC>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_jfcactivity)
+
+        // Setup edge-to-edge behavior
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
@@ -43,16 +44,16 @@ class JFCActivity : AppCompatActivity() {
         jfcList = ArrayList()
 
         recyclerView = findViewById<View>(R.id.rvJfcLists) as RecyclerView
-        recylerViewJfcMenuAdapter = RecyclerViewJfcMenuAdapter(this@JFCActivity, jfcList)
-        val layoutManager : RecyclerView.LayoutManager = GridLayoutManager(this, 2)
+        recyclerViewJfcMenuAdapter = RecyclerViewJfcMenuAdapter(this, jfcList)
+        val layoutManager = GridLayoutManager(this, 2)
         recyclerView!!.layoutManager = layoutManager
-        recyclerView!!.adapter = recylerViewJfcMenuAdapter
+        recyclerView!!.adapter = recyclerViewJfcMenuAdapter
 
         prepareJfcListData()
     }
 
     private fun prepareJfcListData() {
-        var jfcmenu = JFC("Egg Silog"," ₱50.00", R.drawable.egg_silog)
+        var jfcmenu = JFC("Egg Silog", " ₱50.00", R.drawable.egg_silog)
         jfcList.add(jfcmenu)
 
         jfcmenu = JFC("Burger Egg Silog", " ₱50.00", R.drawable.burger_steak)
@@ -79,6 +80,28 @@ class JFCActivity : AppCompatActivity() {
         jfcmenu = JFC("Chowfan Rice", " ₱50.00", R.drawable.chowfan_siomai)
         jfcList.add(jfcmenu)
 
-        recylerViewJfcMenuAdapter!!.notifyDataSetChanged()
+        recyclerViewJfcMenuAdapter!!.notifyDataSetChanged()
+    }
+
+    // Implementation of the OnFavoriteClickListener interface
+    override fun onFavoriteClick(item: JFC) {
+        saveToFavorites(item)
+    }
+
+    // Save the item to favorites
+    private fun saveToFavorites(item: JFC) {
+        val sharedPreferences = getSharedPreferences("Favorites", MODE_PRIVATE)
+        val editor = sharedPreferences.edit()
+
+        // Save the item properties in SharedPreferences
+        editor.putString("${item.title}_name", item.title)
+        editor.putString("${item.title}_price", item.price)
+        editor.putInt("${item.title}_image", item.image)
+
+        // Commit the changes
+        editor.apply()
+
+        // Optionally show a Toast message to confirm the action
+        Toast.makeText(this, "${item.title} added to favorites", Toast.LENGTH_SHORT).show()
     }
 }

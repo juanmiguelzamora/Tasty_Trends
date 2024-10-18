@@ -3,6 +3,8 @@ package com.migsdev.tastytrends
 import android.content.Intent
 import android.os.Bundle
 import android.view.MenuItem
+import android.widget.ImageButton
+import android.widget.ImageView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.ActionBarDrawerToggle
@@ -33,6 +35,12 @@ class DrawerNavigation : AppCompatActivity(), NavigationView.OnNavigationItemSel
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
+        }
+
+        val cartIcon = findViewById<ImageButton>(R.id.cartIcon)
+        cartIcon.setOnClickListener {
+            val intent = Intent(this, CartActivity::class.java)
+            startActivity(intent)
         }
 
         // Set up RecyclerView
@@ -78,6 +86,9 @@ class DrawerNavigation : AppCompatActivity(), NavigationView.OnNavigationItemSel
         stallList.add(Stalls("buko", R.drawable.buko))
         stallList.add(Stalls("gaerlan", R.drawable.gaerlan))
         stallList.add(Stalls("jos", R.drawable.jos))
+        stallList.add(Stalls("koreanfood", R.drawable.koreanfood))
+        stallList.add(Stalls("granny", R.drawable.grannysfoodcorner))
+
 
         recyclerViewStallsAdapter.notifyDataSetChanged()
     }
@@ -107,9 +118,9 @@ class DrawerNavigation : AppCompatActivity(), NavigationView.OnNavigationItemSel
                 startActivity(Intent(this, ProfileActivity::class.java))
             }
             R.id.navFavorite -> {
-                startActivity(Intent(this, JFCActivity::class.java))
+                startActivity(Intent(this, FavoritesActivity::class.java))
             }
-            R.id.navNotification -> {
+            R.id.navOrders -> {
                 startActivity(Intent(this, JFCActivity::class.java))
             }
         }

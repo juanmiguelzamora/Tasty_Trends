@@ -5,9 +5,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
-import android.widget.FrameLayout;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -36,7 +36,7 @@ public final class ActivityDrawerNavigationBinding implements ViewBinding {
   public final EditText editTextText;
 
   @NonNull
-  public final FrameLayout fragmentContainer;
+  public final LinearLayout fragmentContainer;
 
   @NonNull
   public final ImageView imageView6;
@@ -55,7 +55,7 @@ public final class ActivityDrawerNavigationBinding implements ViewBinding {
 
   private ActivityDrawerNavigationBinding(@NonNull DrawerLayout rootView,
       @NonNull ImageButton cartIcon, @NonNull DrawerLayout drawerLayout,
-      @NonNull EditText editTextText, @NonNull FrameLayout fragmentContainer,
+      @NonNull EditText editTextText, @NonNull LinearLayout fragmentContainer,
       @NonNull ImageView imageView6, @NonNull NavigationView navView,
       @NonNull RecyclerView rvStallLists, @NonNull TextView textView7, @NonNull Toolbar toolbar) {
     this.rootView = rootView;
@@ -112,7 +112,7 @@ public final class ActivityDrawerNavigationBinding implements ViewBinding {
       }
 
       id = R.id.fragment_container;
-      FrameLayout fragmentContainer = ViewBindings.findChildViewById(rootView, id);
+      LinearLayout fragmentContainer = ViewBindings.findChildViewById(rootView, id);
       if (fragmentContainer == null) {
         break missingId;
       }
