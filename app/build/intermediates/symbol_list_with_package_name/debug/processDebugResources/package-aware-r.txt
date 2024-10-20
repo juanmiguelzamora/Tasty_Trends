@@ -3175,6 +3175,7 @@ drawable quantityicon
 drawable rice_chicken
 drawable search_icon
 drawable searchbarbg
+drawable settings_icon
 drawable skinless
 drawable speical_vigan
 drawable splash_screen
@@ -3205,6 +3206,7 @@ id SHOW_PATH
 id SHOW_PROGRESS
 id SYM
 id Signup_username
+id StallName
 id TOP_END
 id TOP_START
 id accelerate
@@ -3309,7 +3311,6 @@ id cancel_button
 id cardView
 id carryVelocity
 id cartIcon
-id cartView
 id center
 id centerCrop
 id centerInside
@@ -3397,6 +3398,7 @@ id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
 id fade
+id favView
 id favoriteItem
 id fill
 id fill_horizontal
@@ -3439,7 +3441,9 @@ id ignoreRequest
 id image
 id imageView
 id imageView10
+id imageView11
 id imageView12
+id imageView13
 id imageView15
 id imageView2
 id imageView3
@@ -3473,6 +3477,7 @@ id linear
 id linearLayout
 id linearLayout2
 id linearLayout3
+id linearLayout4
 id listMode
 id list_item
 id login_email
@@ -3627,7 +3632,6 @@ id scroll
 id scrollIndicatorDown
 id scrollIndicatorUp
 id scrollView
-id scrollView2
 id scrollable
 id search_badge
 id search_bar
@@ -3723,10 +3727,20 @@ id textView18
 id textView19
 id textView2
 id textView20
+id textView21
 id textView22
 id textView23
+id textView24
 id textView25
+id textView27
+id textView28
+id textView29
 id textView3
+id textView30
+id textView33
+id textView34
+id textView35
+id textView36
 id textView4
 id textView5
 id textView6
@@ -3764,8 +3778,8 @@ id transition_transform
 id triangle
 id tvPrice
 id tvaddcart
+id tvfavName
 id tvfavPrice
-id tvfavname
 id tvforgotbtn
 id tvmenuName
 id tvmenuPrice
@@ -3920,6 +3934,7 @@ layout activity_jfcactivity
 layout activity_login
 layout activity_main
 layout activity_notification
+layout activity_order
 layout activity_profile
 layout activity_sig_up
 layout custom_dialog
@@ -3945,6 +3960,9 @@ layout layout_cart_list
 layout layout_favorite_list
 layout layout_jfc_menu_lists
 layout layout_stall_lists_item
+layout layout_status_list
+layout layout_torecieve_list
+layout layout_toship_list
 layout m3_alert_dialog
 layout m3_alert_dialog_actions
 layout m3_alert_dialog_title
@@ -5478,4 +5496,3 @@ styleable ViewTransition android_id SharedValue SharedValueId clearsTag duration
 styleable include constraintSet
 xml backup_rules
 xml data_extraction_rules
-xml network_security_config

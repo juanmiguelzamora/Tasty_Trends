@@ -230,21 +230,6 @@
             ]
         },
         {
-            "outputFile": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.migsdev.tastytrends.app-debug-32:\\values-h320dp-port-v13_values-h320dp-port-v13.arsc.flat",
-            "map": [
-                {
-                    "source": "C:\\Users\\User\\.gradle\\caches\\8.9\\transforms\\5691336f77e8375650cb452eb88a6022\\transformed\\material-1.12.0\\res\\values-h320dp-port-v13\\values-h320dp-port-v13.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "63",
-                        "endOffsets": "114"
-                    }
-                }
-            ]
-        },
-        {
             "outputFile": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.migsdev.tastytrends.app-debug-32:\\values-is_values-is.arsc.flat",
             "map": [
                 {
@@ -298,6 +283,37 @@
                         "startOffsets": "320,420,517,629,714,815,929,1010,1089,1180,1273,1366,1460,1566,1659,1754,1849,1940,2034,2115,2225,2332,2429,2538,2638,2741,2896,9383",
                         "endColumns": "99,96,111,84,100,113,80,78,90,92,92,93,105,92,94,94,90,93,80,109,106,96,108,99,102,154,97,80",
                         "endOffsets": "415,512,624,709,810,924,1005,1084,1175,1268,1361,1455,1561,1654,1749,1844,1935,2029,2110,2220,2327,2424,2533,2633,2736,2891,2989,9459"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.migsdev.tastytrends.app-debug-32:\\values-h320dp-port-v13_values-h320dp-port-v13.arsc.flat",
+            "map": [
+                {
+                    "source": "C:\\Users\\User\\.gradle\\caches\\8.9\\transforms\\5691336f77e8375650cb452eb88a6022\\transformed\\material-1.12.0\\res\\values-h320dp-port-v13\\values-h320dp-port-v13.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "63",
+                        "endOffsets": "114"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.migsdev.tastytrends.app-debug-32:\\values-v27_values-v27.arsc.flat",
+            "map": [
+                {
+                    "source": "C:\\Users\\User\\.gradle\\caches\\8.9\\transforms\\e5611ea8f8ec8642ddfaa9abda8baefe\\transformed\\core-splashscreen-1.0.0\\res\\values-v27\\values-v27.xml",
+                    "from": {
+                        "startLines": "2,3,4,7",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,136,229,405",
+                        "endLines": "2,3,6,9",
+                        "endColumns": "80,92,12,12",
+                        "endOffsets": "131,224,400,588"
                     }
                 }
             ]
@@ -361,17 +377,16 @@
             ]
         },
         {
-            "outputFile": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.migsdev.tastytrends.app-debug-32:\\values-v27_values-v27.arsc.flat",
+            "outputFile": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.migsdev.tastytrends.app-debug-32:\\values-w600dp-land-v13_values-w600dp-land-v13.arsc.flat",
             "map": [
                 {
-                    "source": "C:\\Users\\User\\.gradle\\caches\\8.9\\transforms\\e5611ea8f8ec8642ddfaa9abda8baefe\\transformed\\core-splashscreen-1.0.0\\res\\values-v27\\values-v27.xml",
+                    "source": "C:\\Users\\User\\.gradle\\caches\\8.9\\transforms\\5691336f77e8375650cb452eb88a6022\\transformed\\material-1.12.0\\res\\values-w600dp-land-v13\\values-w600dp-land-v13.xml",
                     "from": {
-                        "startLines": "2,3,4,7",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "55,136,229,405",
-                        "endLines": "2,3,6,9",
-                        "endColumns": "80,92,12,12",
-                        "endOffsets": "131,224,400,588"
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "54",
+                        "endOffsets": "105"
                     }
                 }
             ]
@@ -435,37 +450,6 @@
             ]
         },
         {
-            "outputFile": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.migsdev.tastytrends.app-debug-32:\\values-w600dp-land-v13_values-w600dp-land-v13.arsc.flat",
-            "map": [
-                {
-                    "source": "C:\\Users\\User\\.gradle\\caches\\8.9\\transforms\\5691336f77e8375650cb452eb88a6022\\transformed\\material-1.12.0\\res\\values-w600dp-land-v13\\values-w600dp-land-v13.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "54",
-                        "endOffsets": "105"
-                    }
-                }
-            ]
-        },
-        {
-            "outputFile": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.migsdev.tastytrends.app-debug-32:\\values-watch-v21_values-watch-v21.arsc.flat",
-            "map": [
-                {
-                    "source": "C:\\Users\\User\\.gradle\\caches\\8.9\\transforms\\c75cbd09567f7eb73a584984260aca42\\transformed\\appcompat-1.7.0\\res\\values-watch-v21\\values-watch-v21.xml",
-                    "from": {
-                        "startLines": "2,6,10",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "55,271,499",
-                        "endLines": "5,9,13",
-                        "endColumns": "12,12,12",
-                        "endOffsets": "266,494,724"
-                    }
-                }
-            ]
-        },
-        {
             "outputFile": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.migsdev.tastytrends.app-debug-32:\\values-az_values-az.arsc.flat",
             "map": [
                 {
@@ -524,6 +508,56 @@
             ]
         },
         {
+            "outputFile": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.migsdev.tastytrends.app-debug-32:\\values-watch-v21_values-watch-v21.arsc.flat",
+            "map": [
+                {
+                    "source": "C:\\Users\\User\\.gradle\\caches\\8.9\\transforms\\c75cbd09567f7eb73a584984260aca42\\transformed\\appcompat-1.7.0\\res\\values-watch-v21\\values-watch-v21.xml",
+                    "from": {
+                        "startLines": "2,6,10",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,271,499",
+                        "endLines": "5,9,13",
+                        "endColumns": "12,12,12",
+                        "endOffsets": "266,494,724"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.migsdev.tastytrends.app-debug-32:\\values-sw600dp-v13_values-sw600dp-v13.arsc.flat",
+            "map": [
+                {
+                    "source": "C:\\Users\\User\\.gradle\\caches\\8.9\\transforms\\c75cbd09567f7eb73a584984260aca42\\transformed\\appcompat-1.7.0\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,124,193,263,337,413,472,543",
+                        "endColumns": "68,68,69,73,75,58,70,67",
+                        "endOffsets": "119,188,258,332,408,467,538,606"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\User\\.gradle\\caches\\8.9\\transforms\\5691336f77e8375650cb452eb88a6022\\transformed\\material-1.12.0\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,10,11,12,13,14",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,115,185,256,328,386,444,553,617,673,732,795",
+                        "endLines": "2,3,4,5,6,7,9,10,11,12,13,17",
+                        "endColumns": "59,69,70,71,57,57,10,63,55,58,62,10",
+                        "endOffsets": "110,180,251,323,381,439,548,612,668,727,790,962"
+                    },
+                    "to": {
+                        "startLines": "10,11,12,13,14,15,16,18,19,20,21,22",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "611,671,741,812,884,942,1000,1109,1173,1229,1288,1351",
+                        "endLines": "10,11,12,13,14,15,17,18,19,20,21,25",
+                        "endColumns": "59,69,70,71,57,57,10,63,55,58,62,10",
+                        "endOffsets": "666,736,807,879,937,995,1104,1168,1224,1283,1346,1518"
+                    }
+                }
+            ]
+        },
+        {
             "outputFile": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.migsdev.tastytrends.app-debug-32:\\values-sq_values-sq.arsc.flat",
             "map": [
                 {
@@ -577,40 +611,6 @@
                         "endLines": "5,33,34,35,36,37,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,113,114,115",
                         "endColumns": "12,78,77,85,99,91,100,125,82,64,64,99,69,58,97,61,63,58,71,62,53,116,56,61,53,71,134,82,78,95,82,77,140,83,81,147,89,77,52,58,65,70,78,70,82,75,77,71,72,103,88,71,93,98,73,71,100,49,84,65,89,88,61,63,62,66,115,112,108,104,56,62,82,84,73,77",
                         "endOffsets": "312,3087,3165,3251,3351,3443,4281,4407,4490,4555,4620,4720,4790,4849,4947,5009,5073,5132,5204,5267,5321,5438,5495,5557,5611,5683,5818,5901,5980,6076,6159,6237,6378,6462,6544,6692,6782,6860,6913,6972,7038,7109,7188,7259,7342,7418,7496,7568,7641,7745,7834,7906,8000,8099,8173,8245,8346,8396,8481,8547,8637,8726,8788,8852,8915,8982,9098,9211,9320,9425,9482,9545,9628,9795,9869,9947"
-                    }
-                }
-            ]
-        },
-        {
-            "outputFile": "C:\\Users\\User\\.gradle\\daemon\\8.9\\com.migsdev.tastytrends.app-debug-32:\\values-sw600dp-v13_values-sw600dp-v13.arsc.flat",
-            "map": [
-                {
-                    "source": "C:\\Users\\User\\.gradle\\caches\\8.9\\transforms\\c75cbd09567f7eb73a584984260aca42\\transformed\\appcompat-1.7.0\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,124,193,263,337,413,472,543",
-                        "endColumns": "68,68,69,73,75,58,70,67",
-                        "endOffsets": "119,188,258,332,408,467,538,606"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\User\\.gradle\\caches\\8.9\\transforms\\5691336f77e8375650cb452eb88a6022\\transformed\\material-1.12.0\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,10,11,12,13,14",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,115,185,256,328,386,444,553,617,673,732,795",
-                        "endLines": "2,3,4,5,6,7,9,10,11,12,13,17",
-                        "endColumns": "59,69,70,71,57,57,10,63,55,58,62,10",
-                        "endOffsets": "110,180,251,323,381,439,548,612,668,727,790,962"
-                    },
-                    "to": {
-                        "startLines": "10,11,12,13,14,15,16,18,19,20,21,22",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "611,671,741,812,884,942,1000,1109,1173,1229,1288,1351",
-                        "endLines": "10,11,12,13,14,15,17,18,19,20,21,25",
-                        "endColumns": "59,69,70,71,57,57,10,63,55,58,62,10",
-                        "endOffsets": "666,736,807,879,937,995,1104,1168,1224,1283,1346,1518"
                     }
                 }
             ]

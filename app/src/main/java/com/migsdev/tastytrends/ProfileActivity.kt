@@ -3,7 +3,6 @@ package com.migsdev.tastytrends
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Button
 import android.widget.ImageView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -24,7 +23,7 @@ class ProfileActivity : AppCompatActivity() {
 
         val btnBack = findViewById<ImageView>(R.id.btnBack)
         btnBack.setOnClickListener {
-            val intent = Intent(this, DrawerNavigation::class.java)
+            val intent = Intent(this, HomeActivity::class.java)
             startActivity(intent)
         }
     }

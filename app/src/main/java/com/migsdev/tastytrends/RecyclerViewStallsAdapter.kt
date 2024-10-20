@@ -9,7 +9,7 @@ import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 
 class RecyclerViewStallsAdapter(
-    private val activity: DrawerNavigation,
+    private val activity: HomeActivity,
     private val stallsList: List<Stalls>
 ) : RecyclerView.Adapter<RecyclerViewStallsAdapter.MyViewHolder>() {
 

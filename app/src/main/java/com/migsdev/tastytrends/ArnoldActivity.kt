@@ -27,7 +27,7 @@ class ArnoldActivity : AppCompatActivity() {
 
         val btnback = findViewById<ImageView>(R.id.btnback)
         btnback.setOnClickListener {
-            val intent = Intent(this, DrawerNavigation::class.java)
+            val intent = Intent(this, HomeActivity::class.java)
             startActivity(intent)
         }
 

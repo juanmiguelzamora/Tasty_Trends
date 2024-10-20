@@ -37,7 +37,7 @@ class JFCActivity : AppCompatActivity(), OnFavoriteClickListener {
 
         val btnback = findViewById<ImageView>(R.id.btnback)
         btnback.setOnClickListener {
-            val intent = Intent(this, DrawerNavigation::class.java)
+            val intent = Intent(this, HomeActivity::class.java)
             startActivity(intent)
         }
 
@@ -103,5 +103,26 @@ class JFCActivity : AppCompatActivity(), OnFavoriteClickListener {
 
         // Optionally show a Toast message to confirm the action
         Toast.makeText(this, "${item.title} added to favorites", Toast.LENGTH_SHORT).show()
+    }
+
+    override fun onCartClick(item: JFC) {
+        saveToCart(item)
+    }
+
+    // Save the item to favorites
+    private fun saveToCart(item: JFC) {
+        val sharedPreferences = getSharedPreferences("Cart", MODE_PRIVATE)
+        val editor = sharedPreferences.edit()
+
+        // Save the item properties in SharedPreferences
+        editor.putString("${item.title}_name", item.title)
+        editor.putString("${item.title}_price", item.price)
+        editor.putInt("${item.title}_image", item.image)
+
+        // Commit the changes
+        editor.apply()
+
+        // Optionally show a Toast message to confirm the action
+        Toast.makeText(this, "${item.title} added to cart", Toast.LENGTH_SHORT).show()
     }
 }

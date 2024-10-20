@@ -35,7 +35,7 @@ class FavoritesActivity : AppCompatActivity() {
         // Back button behavior
         val btnBack = findViewById<ImageView>(R.id.btnBack)
         btnBack.setOnClickListener {
-            val intent = Intent(this, DrawerNavigation::class.java)
+            val intent = Intent(this, HomeActivity::class.java)
             startActivity(intent)
         }
 
@@ -54,6 +54,10 @@ class FavoritesActivity : AppCompatActivity() {
         adapter = RecyclerViewJfcMenuAdapter(object : OnFavoriteClickListener {
             override fun onFavoriteClick(item: JFC) {
                 // Handle favorite click if needed
+            }
+
+            override fun onCartClick(item: JFC) {
+                TODO("Not yet implemented")
             }
         }, favoriteList)
         recyclerView.adapter = adapter
